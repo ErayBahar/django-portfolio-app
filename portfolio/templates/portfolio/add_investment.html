@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Investment</title>
+</head>
+<body style="margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center; font-family: Arial;">
+
+    <div style="border: 1px solid #ccc; padding: 30px 40px; border-radius: 10px; box-shadow: 0 0 10px #aaa;">
+        <h1 style="font-size: 24px; text-align: center;">Add New Investment</h1>
+
+        <form method="POST" style="text-align: left;">
+            {% csrf_token %}
+
+            <label style="font-weight: bold;">🧾 Symbol:</label><br>
+            {{ form.symbol }}<br><br>
+
+            <label style="font-weight: bold;">💰 Bought Price:</label><br>
+            {{ form.boughtPrice }}<br><br>
+
+            <label style="font-weight: bold;">📦 Amount:</label><br>
+            {{ form.amount }}<br><br>
+
+            <div style="text-align: center;">
+                <button type="submit" style="padding: 10px 20px; font-size: 16px;">Add</button>
+            </div>
+        </form>
+
+        <br>
+        <div style="text-align: center;">
+        <a href="{% url 'portfolio_list' %}" 
+          style="display: inline-block; padding: 10px 20px; font-size: 14px; text-decoration: none;
+            background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 6px;
+            transition: background-color 0.2s ease;">
+         ← Back to Portfolio
+         </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
