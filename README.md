@@ -10,8 +10,6 @@ Track your investments in real-time with a simple Django web application using l
 - Real-time stock/crypto prices
 - Profit shown in dollars and percentages
 - Admin panel for easier management
-- Auto-refreshes every 10 seconds
-
 ---
 
 ## 📦 Installation
